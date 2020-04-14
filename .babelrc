@@ -1,0 +1,13 @@
+{
+  "env": {
+    "test": {
+      "plugins": ["@babel/plugin-transform-modules-commonjs"]
+    }
+  }
+}
+
+//The configuration above states that our test environment should use the plugin we just installed to transform ES6 modules into CommonJS modules, which is what Node uses.
+
+//Jest uses NodeJS's require() statements instead of ES6's import and export syntax. However, we are using import and export in our applications.
+
+//Babel can solve this problem for us by transforming ES6 module syntax to the require() syntax that Jest needs.
